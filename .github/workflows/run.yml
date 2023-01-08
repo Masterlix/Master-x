@@ -1,0 +1,13 @@
+name: 🎨 MLTBကိုGithubActionဖြင့်Runခြင်း
+on:
+  workflow_dispatch:
+jobs:
+  ClickMe:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Create Image
+      run: |
+        echo "dckr_pat_qgGL5fCgIPWvNf0K9bQ2ypWV3Eo" | docker login -u "anasaty17" --password-stdin
+        docker pull anasaty17/drivetalkmltb:xxx
+        docker run anasaty17/drivetalkmltb:xxx
